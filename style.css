@@ -316,7 +316,10 @@ footer {
     position: absolute;
     top:   18px;
     right: 18px;
-    cursor: pointer;
+    cursor: pointer;    
+}
+.modal-close-img{
+    pointer-events: none;
 }
 
 .modal-link {
