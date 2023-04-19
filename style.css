@@ -341,19 +341,82 @@ footer {
 .modal-link:focus {
     color: #F4CE0C;
 }
+ /* test */
 
-.form-radio {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
+.status-bar {    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #ccc;
+    margin-bottom: 96px;
 }
 
-.form-radio input {
+
+.status-progress {    
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #00bfff;
+    transition: width 0.3s ease-in-out;    
+}
+
+
+.iqTest {
+    height: calc(100vh - 158px) ;
+    background-image: url(./images/bg.jpg);
+    font-family: 'PT Serif';
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+ }
+ .form-text {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+ }
+.form-radio {
+    position: relative;
+    display: block;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(242, 243, 243, 0.15);
+}
+.form-colors-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+}
+.form-radio-colors:not(:nth-child(3n+3)){
+    margin-right: 20px;
+}
+.form-radio-colors {
+    margin-bottom: 20px;
+}
+.form-radio input,
+.form-radio-colors input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-
+.form-radio-colors .custom-radio-colors{
+    position: relative;
+    display: inline-block;
+    width: 69px;
+    height: 69px;
+    border: 6px solid transparent;
+    vertical-align: middle;
+}
+.form-radio-colors input:checked ~ .custom-radio-colors {
+    border: 6px solid #FFC700;
+}
 .form-radio .custom-radio-button {
     position: relative;
     display: inline-block;
@@ -361,7 +424,7 @@ footer {
     height: 20px;
     border: 2px solid #ccc;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 40px;
     vertical-align: middle;
 }
 
@@ -374,19 +437,18 @@ footer {
     height: 12px;
     background-color: #ccc;
     border-radius: 50%;
+    
+}
+.form-img {
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .form-radio .custom-radio-button {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-    }
+.section {
+    display: none;
+    
+}
 
-        .form-radio input:checked+.custom-radio-button:after {
-        left: 3px;
-        top: 3px;
-        width: 9px;
-        height: 9px;
-    }
+.section.active {
+    display: block;
 }
